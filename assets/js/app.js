@@ -13,7 +13,7 @@ const app = createApp({
             ],
             // partiamo nel array con la posizione 0
             activeImg: 0,
-            imgPlay: [],
+            imgPlay: null,
         };
     },
     //selezioniamo i btn tramite i methods 
@@ -42,7 +42,7 @@ const app = createApp({
         },
 
         mounted() {
-            this.stopPlay();
+            this.startPlay();
         }
 
     }
