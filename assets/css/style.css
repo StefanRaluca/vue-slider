@@ -22,7 +22,8 @@
     width: 100%;
     max-width: 600px;
     height: auto; 
-    display: none;
+display: none;
+object-fit: cover;
 
     
 }
@@ -51,5 +52,5 @@
   
 }
 .carousel_img img.active {
-    display: block;
+   display: block; 
 }

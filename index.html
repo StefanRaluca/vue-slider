@@ -11,15 +11,19 @@
 </head>
 <body>
     <div id="app" class="container_carousel">
-        <button class="top_button"><i class="fas fa-chevron-up"></i></button>
+        <button class="top_button" @click="upBtn"><i class="fas fa-chevron-up"></i></button>
         <div class="carousel_img">
-          <img src="assets/img/04.webp" class="active">
+
+<!--          <img src="assets/img/04.webp" class="active">
             <img src="./assets/img/01.webp" alt="">
             <img src="./assets/img/02.webp" alt="">
             <img src="./assets/img/03.webp" alt="">
             <img src="./assets/img/05.webp" alt=""> 
-        </div>
-        <button class="bottom_button"><i class="fas fa-chevron-down"></i></button>
+ -->
+            <img v-for="(image ,i ) in images" :src="image.src"  :class="{active: i === activeImg }">
+
+         </div>
+        <button class="bottom_button"@click="downBtn"><i class="fas fa-chevron-down"></i></button>
 
     </div>
 
