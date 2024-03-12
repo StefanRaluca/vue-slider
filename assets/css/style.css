@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+.container_carousel {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding-top: 40px;
+}
+
+.carousel_img {
+    display: flex;
+    justify-content: center;
+
+}
+
+.carousel_img img {
+    width: 100%;
+    max-width: 600px;
+    height: auto; 
+    display: none;
+
+    
+}
+
+.top_button,
+.bottom_button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    background-color: rgb(255 255 255 / 74%);
+    border-radius: 50%;
+   
+}
+
+.top_button {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 60px;
+}
+
+.bottom_button {
+    right: 50%;
+    transform: translate(50%, -50%);
+    bottom: 0;
+  
+}
+.carousel_img img.active {
+    display: block;
+}
