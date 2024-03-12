@@ -1,9 +1,9 @@
-const { createApp } = Vue
+const { createApp } = Vue;
 
-createApp({
+const app = createApp({
     data() {
         return {
-     //facciamo il array per le img
+            //facciamo il array per le img
             images: [
                 { src: "./assets/img/01.webp" },
                 { src: "./assets/img/02.webp" },
@@ -12,7 +12,7 @@ createApp({
                 { src: "./assets/img/05.webp" }
             ],
             // partiamo nel array con la posizione 0
-       activeImg: 0,
+            activeImg: 0,
         };
     },
     //selezioniamo i btn tramite i methods 
@@ -24,11 +24,12 @@ createApp({
         downBtn() {
             this.activeImg = (this.activeImg - 1 + this.images.length) % this.images.length;
 
+        },
+        showImage(i) {
+            this.activeImg = i
         }
+    },
+});
 
-    }
+app.mount('#app');
 
-}).mount('#app');
-
-
-console.log('it works');
